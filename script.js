@@ -10,7 +10,11 @@ return (weight / Math.pow(height, 2));
 // creates a new paragraph to display the result
 function createPara(bmi) {
     const newPara = document.createElement("p");
-    newPara.id = "result";
+    if (bmi <= 18.4){newPara.id = "result_underweight";}
+    else if (bmi >= 18.5 && bmi <= 24.9){newPara.id = "result_normal";}
+    else if (bmi >= 25 && bmi <= 39.9){newPara.id = "result_overweight";}
+    else {newPara.id = "result_obese"}
+    
     newPara.innerHTML = "BMI: " + bmi;
     document.getElementById('input_box').appendChild(newPara);
 }
