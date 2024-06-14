@@ -1,3 +1,7 @@
+body {
+    background-color: rgba(190, 190, 167, 0.148);
+} 
+
 body > h1 {
     color:#676711;
     display: flex;
@@ -32,7 +36,7 @@ button {
     letter-spacing: 1px;
     border: 3px solid beige;
     border-radius: 10px;
-    background-color: rgba(245, 245, 220, 0.763);
+    background-color: #f5f5dcc3;
     cursor: pointer;
     text-transform: uppercase;
     box-shadow: 2px 2px 4px rgba(191, 191, 157, 0.637);
@@ -52,8 +56,35 @@ button {
     width: 100px;
     background-color: tomato;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid rgba(255, 99, 71, 0.747);
+    border: 1px solid rgba(117, 112, 112, 0.747);
     border-radius: 10px;
     text-align: center;
     margin-top: 40px;
+}
+
+
+#bmi_table {
+    margin-top: 3.5rem;
+    width: 30rem;
+    font-size: larger;
+
+}
+
+#bmi_table > #row1 {
+    
+}
+
+#row_heading {
+    font-size: larger;
+    /*background-color:#dededca1;*/
+    background-color: #f5f5dcc3;
+    
+}
+
+
+table, th, td {
+    border: 1px solid #b6b679c3;
+    border-collapse: collapse;
+    padding: 8px 15px;
+    margin: 0;
 }
