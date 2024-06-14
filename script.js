@@ -10,6 +10,7 @@ return (weight / Math.pow(height, 2));
 // creates a new paragraph to display the result
 function createPara(bmi) {
     const newPara = document.createElement("p");
+    newPara.id = "result";
     newPara.innerHTML = "BMI: " + bmi;
     document.getElementById('input_box').appendChild(newPara);
 }
