@@ -155,10 +155,10 @@ td {
     }
 
     table, th, td {
-        padding: 8px 5px; /* Reduce padding for smaller screens */
+        padding: 8px 5px; 
     }
 
     #bmi_table {
-        font-size: medium; /* Adjust font size for smaller screens */
+        font-size: medium;
     }
 }
