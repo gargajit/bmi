@@ -2,16 +2,22 @@ const weightInput = document.getElementById("weight");
 const heightInput = document.getElementById("height");
 const calcBtn = document.getElementById("calculateBtn");
 
+
 // BMI calclulator function
 function bmiCalculator(weight, height) {
 return (weight / Math.pow(height, 2));
 }
 
+
 // create or update paragraph to display the result
 function createPara(bmi) {
+
     let updatePara = null;
             
-    // Check if any of the result paragraphs already exist
+    /* explicitly checks for each possible result paragraph and 
+    assigns it to updatePara if it exists. 
+    This way, we know exactly which paragraph to update based on the 
+    previous result.*/
     if (document.getElementById("result_underweight")){
         updatePara = document.getElementById("result_underweight");
     }
@@ -25,7 +31,17 @@ function createPara(bmi) {
         updatePara = document.getElementById("result_obese");
     }
 
+
     // If a paragraph exists, update its ID and text content
+
+    /* Updating id is important, because the paragraph might change
+    fro one category to another based on the new BMI value.
+    
+    We reset the row colors each time to remove any previous highlight 
+    and apply the new highlight based on the current BMI.
+    Without resetting, previous highlights would remain, 
+    causing multiple rows to be highlighted simultaneously. 
+    This is visually confusing and incorrect.*/
     if (updatePara) {
         if (bmi <= 18.4) {
             updatePara.id = "result_underweight";
